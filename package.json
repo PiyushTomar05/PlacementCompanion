@@ -1,0 +1,14 @@
+{
+  "name": "placement-companion",
+  "version": "1.0.0",
+  "description": "Placement Companion - AI-Teacher Driven Dynamic Learning System",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix client run build",
+    "start": "node server/server.js",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev"
+  }
+}

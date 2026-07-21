@@ -1,0 +1,598 @@
+{
+  "daily_lessons": {
+    "2026-07-21": {
+      "date": "2026-07-21",
+      "englishWords": [
+        {
+          "id": "eng_1",
+          "word": "Scalability",
+          "pronunciation": "/ˌskeɪ.ləˈbɪl.ə.ti/",
+          "meaning": "The capacity of a system, network, or process to handle a growing amount of work or its potential to be enlarged to accommodate that growth.",
+          "synonyms": [
+            "Expandability",
+            "Adaptability",
+            "Growth potential"
+          ],
+          "example": "The application was designed with horizontal scalability in mind to accommodate sudden traffic spikes.",
+          "corporateUsage": "We need to re-architect our backend to ensure scalability before the upcoming market launch.",
+          "interviewUsage": "When discussing system design, emphasize how your choice of database impacts overall scalability.",
+          "difficulty": "Intermediate",
+          "category": "Technical Architecture"
+        },
+        {
+          "id": "eng_2",
+          "word": "Paradigm",
+          "pronunciation": "/ˈpær.ə.daɪm/",
+          "meaning": "A typical pattern or model of something; a distinct set of concepts or thought patterns in a discipline.",
+          "synonyms": [
+            "Model",
+            "Framework",
+            "Pattern",
+            "Archetype"
+          ],
+          "example": "Object-oriented programming is a fundamental paradigm in modern software development.",
+          "corporateUsage": "Adopting cloud-native infrastructure represented a major paradigm shift for our engineering team.",
+          "interviewUsage": "I am comfortable working across functional and object-oriented paradigms depending on product needs.",
+          "difficulty": "Intermediate",
+          "category": "Corporate Communication"
+        },
+        {
+          "id": "eng_3",
+          "word": "Asynchronous",
+          "pronunciation": "/eɪˈsɪŋ.krə.nəs/",
+          "meaning": "Not occurring at the same time; executing operations independently of the main program flow.",
+          "synonyms": [
+            "Non-blocking",
+            "Concurrent",
+            "Unsynchronized"
+          ],
+          "example": "Using asynchronous I/O prevents the main thread from blocking while waiting for network responses.",
+          "corporateUsage": "Our team relies on asynchronous communication channels to collaborate across different time zones.",
+          "interviewUsage": "I leveraged asynchronous operations in JavaScript to improve UI responsiveness during API calls.",
+          "difficulty": "Intermediate",
+          "category": "Technical Communication"
+        },
+        {
+          "id": "eng_4",
+          "word": "Idempotent",
+          "pronunciation": "/ˌaɪ.dɛmˈpoʊ.tənt/",
+          "meaning": "Denoting an element or operation which, if applied several times, produces the same result as if it were applied once.",
+          "synonyms": [
+            "Repeatable",
+            "Consistent",
+            "Invariant"
+          ],
+          "example": "HTTP PUT requests are idempotent because repeated requests result in the same resource state.",
+          "corporateUsage": "Make sure the API endpoint for payment processing is idempotent to prevent double charging.",
+          "interviewUsage": "Designing idempotent REST APIs is crucial for handling network retries gracefully.",
+          "difficulty": "Advanced",
+          "category": "Technical Architecture"
+        },
+        {
+          "id": "eng_5",
+          "word": "Deprecate",
+          "pronunciation": "/ˈdep.rə.keɪt/",
+          "meaning": "To mark a feature or software component as obsolete, discouraging its use in favor of a newer alternative.",
+          "synonyms": [
+            "Phase out",
+            "Discontinue",
+            "Decommission"
+          ],
+          "example": "The legacy authentication endpoint will be deprecated in the next major API release.",
+          "corporateUsage": "We plan to deprecate v1 of the REST API once 95% of clients migrate to v2.",
+          "interviewUsage": "When refactoring legacy code, I always check for deprecated methods to avoid security vulnerabilities.",
+          "difficulty": "Intermediate",
+          "category": "Software Lifecycle"
+        },
+        {
+          "id": "eng_6",
+          "word": "Bottleneck",
+          "pronunciation": "/ˈbɑː.t̬əl.nek/",
+          "meaning": "A point of congestion in a system that stops or slows down progress.",
+          "synonyms": [
+            "Chokepoint",
+            "Obstruction",
+            "Constraint"
+          ],
+          "example": "Unindexed database queries proved to be the main performance bottleneck during peak load tests.",
+          "corporateUsage": "We identified a bottleneck in our CI/CD pipeline that was slowing down release cycles.",
+          "interviewUsage": "Using profiling tools allowed me to pinpoint the CPU bottleneck in our rendering pipeline.",
+          "difficulty": "Intermediate",
+          "category": "Corporate Communication"
+        },
+        {
+          "id": "eng_7",
+          "word": "Latency",
+          "pronunciation": "/ˈleɪ.tən.si/",
+          "meaning": "The time delay between the initiation of an operation and its actual completion or receipt of data.",
+          "synonyms": [
+            "Delay",
+            "Lag",
+            "Response time"
+          ],
+          "example": "Deploying servers closer to users helped significantly reduce network latency.",
+          "corporateUsage": "Our key performance indicator for this quarter is keeping service response latency under 50 milliseconds.",
+          "interviewUsage": "I chose Redis caching to minimize database query latency for real-time dashboard data.",
+          "difficulty": "Intermediate",
+          "category": "Technical Communication"
+        },
+        {
+          "id": "eng_8",
+          "word": "Architecture",
+          "pronunciation": "/ˈɑːr.kə.tek.tʃɚ/",
+          "meaning": "The conceptual structure and overall logical organization of a computer system, software application, or network.",
+          "synonyms": [
+            "Design",
+            "Structure",
+            "Blueprint",
+            "Framework"
+          ],
+          "example": "A microservices architecture allows autonomous teams to deploy services independently.",
+          "corporateUsage": "The technical committee reviewed the proposal to update our application architecture.",
+          "interviewUsage": "I prefer clean architecture principles to keep business logic decoupled from external frameworks.",
+          "difficulty": "Beginner",
+          "category": "Technical Architecture"
+        },
+        {
+          "id": "eng_9",
+          "word": "Redundancy",
+          "pronunciation": "/rɪˈdʌn.dən.si/",
+          "meaning": "The inclusion of extra components or backup mechanisms to ensure system reliability in case of failure.",
+          "synonyms": [
+            "Duplication",
+            "Backup",
+            "Fail-safe",
+            "Replication"
+          ],
+          "example": "High-availability databases rely on data redundancy across multiple geographic regions.",
+          "corporateUsage": "Implementing cloud instance redundancy prevented downtime during last night's outage.",
+          "interviewUsage": "To ensure system resilience, I incorporated structural redundancy in critical data storage nodes.",
+          "difficulty": "Intermediate",
+          "category": "Technical Architecture"
+        },
+        {
+          "id": "eng_10",
+          "word": "Abstract",
+          "pronunciation": "/æbˈstrækt/",
+          "meaning": "To extract or separate essential properties from complex background implementation details.",
+          "synonyms": [
+            "Generalize",
+            "Simplify",
+            "Encapsulate"
+          ],
+          "example": "Interfaces allow developers to abstract implementation details behind a clean contract.",
+          "corporateUsage": "Our team built an SDK to abstract the complexities of payment gateway integration.",
+          "interviewUsage": "By abstracting database operations behind a repository pattern, we made unit testing straightforward.",
+          "difficulty": "Intermediate",
+          "category": "Corporate Communication"
+        }
+      ],
+      "csTopics": [
+        {
+          "id": "cs_1",
+          "subject": "Object-Oriented Programming",
+          "topicName": "What is OOP?",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Object-Oriented Programming (OOP) is a programming paradigm centered around 'objects' containing data (fields/attributes) and code (methods/behaviors) rather than functions and logic alone.",
+          "whyImportant": "OOP facilitates modularity, code reusability, maintainability, and scalable software design by modeling real-world entities into software constructs.",
+          "analogy": "Think of a Blueprint (Class) vs a Real Car (Object). A blueprint defines properties (color, top speed) and capabilities (drive, brake), while an actual car built from it is a functional instance.",
+          "detailedExplanation": "OOP structures software design around data objects rather than functions and logic. The 4 main pillars are: Encapsulation (bundling data and methods, restricting direct access), Abstraction (hiding internal implementation details), Inheritance (deriving new classes from existing ones to reuse code), and Polymorphism (allowing entities to take on multiple forms or behaviors).",
+          "visualization": "[ Class: Car ] ---> Instantiation ---> [ Object 1: Red Tesla ] & [ Object 2: Blue BMW ]",
+          "codeExample": "class Car {\n    private String brand;\n    public Car(String brand) { this.brand = brand; }\n    public void drive() { System.out.println(brand + \" is driving\"); }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Car myCar = new Car(\"Tesla\");\n        myCar.drive();\n    }\n}",
+          "interviewTips": "Be prepared to explain the 4 pillars clearly with real-world examples and contrast OOP with Procedural Programming.",
+          "commonInterviewQuestions": [
+            "What are the 4 main pillars of OOP?",
+            "What is the difference between a class and an object?",
+            "How does OOP differ from Functional Programming?"
+          ],
+          "commonMistakes": "Confusing abstraction with encapsulation, or overusing inheritance where composition is better suited.",
+          "memoryTricks": "Remember 'A PIE': Abstraction, Polymorphism, Inheritance, Encapsulation.",
+          "oneMinuteNotes": "OOP organizes code around objects. Class = blueprint, Object = instance. Core concepts: Encapsulation, Abstraction, Inheritance, Polymorphism.",
+          "quiz": {
+            "question": "Which pillar of OOP is responsible for hiding internal implementation details and exposing only necessary functionality?",
+            "options": [
+              "Encapsulation",
+              "Abstraction",
+              "Inheritance",
+              "Polymorphism"
+            ],
+            "correctIndex": 1,
+            "explanation": "Abstraction hides complex background implementation details and reveals only the necessary functional interfaces to the user."
+          }
+        },
+        {
+          "id": "cs_2",
+          "subject": "Database Management System",
+          "topicName": "Introduction to DBMS",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "A Database Management System (DBMS) is software designed to store, retrieve, manage, and manipulate data systematically while ensuring data integrity and security.",
+          "whyImportant": "Traditional file systems lack concurency control, data integrity constraints, and efficient query processing. DBMS provides atomic transactions, scalability, and secure multi-user data access.",
+          "analogy": "A DBMS is like a highly organized library with a librarian. Instead of patrons searching unstructured stacks, the librarian handles cataloging, retrieval, security, and access control.",
+          "detailedExplanation": "A DBMS sits between application programs and physical storage files. It handles data definition, storage, manipulation, and transaction processing. DBMS applications enforce key features like ACID properties (Atomicity, Consistency, Isolation, Durability) to guarantee correctness during concurrent operations.",
+          "visualization": "[ Application ] <---> [ DBMS Engine ] <---> [ Physical Database Storage ]",
+          "codeExample": "CREATE TABLE Users (\n    id INT PRIMARY KEY,\n    name VARCHAR(100),\n    email VARCHAR(100) UNIQUE\n);\nINSERT INTO Users VALUES (1, 'Alice', 'alice@example.com');\nSELECT * FROM Users WHERE id = 1;",
+          "interviewTips": "Focus on the differences between File System vs DBMS and explain the ACID properties clearly.",
+          "commonInterviewQuestions": [
+            "What is a DBMS and why is it preferred over traditional file systems?",
+            "What are ACID properties in DBMS?",
+            "What is the difference between DDL and DML?"
+          ],
+          "commonMistakes": "Assuming DBMS refers strictly to SQL databases (it encompasses both Relational and Non-Relational systems).",
+          "memoryTricks": "Think ACID: Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), Durability (persisted permanently).",
+          "oneMinuteNotes": "DBMS manages structured/unstructured data efficiently, offering security, concurrency control, data integrity, and recovery mechanisms over plain file systems.",
+          "quiz": {
+            "question": "Which of the following is NOT a fundamental advantage of a DBMS over a file system?",
+            "options": [
+              "Data redundancy control",
+              "Concurrent access support",
+              "Increased structural dependency",
+              "Data security and integrity"
+            ],
+            "correctIndex": 2,
+            "explanation": "DBMS provides data independence, meaning changes in physical structure do not break application logic, whereas file systems suffer from structural dependency."
+          }
+        },
+        {
+          "id": "cs_3",
+          "subject": "Operating System",
+          "topicName": "Introduction",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "An Operating System (OS) is system software that acts as an intermediary between computer hardware and user software applications, managing hardware resources and execution.",
+          "whyImportant": "Without an OS, application software would have to be written directly to bare-metal hardware instructions, making software non-portable, unsafe, and extremely difficult to construct.",
+          "analogy": "An OS is like a conductor of an orchestra. Individual musicians (hardware components) play instruments, but the conductor coordinates timing, resource allocation, and overall harmony.",
+          "detailedExplanation": "The core of an OS is the Kernel, which loads into RAM at startup and manages hardware interfaces directly. Key functions of an OS include Process Management (CPU scheduling), Memory Management (RAM allocation, virtual memory), Storage/File System Management, I/O Management, and System Security.",
+          "visualization": "[ User Applications ] ---> [ OS / Kernel ] ---> [ Hardware: CPU, RAM, Disk ]",
+          "codeExample": "// System Call example in C (Linux OS)\n#include <unistd.h>\n#include <stdio.h>\nint main() {\n    write(1, \"Hello OS World\\n\", 15); // Direct system call to output buffer\n    return 0;\n}",
+          "interviewTips": "Understand the dual mode of operation: Kernel Mode (privileged access) vs User Mode (restricted access) and common OS architecture responsibilities.",
+          "commonInterviewQuestions": [
+            "What is the primary function of an Operating System Kernel?",
+            "What is the difference between User Mode and Kernel Mode?",
+            "What is a System Call?"
+          ],
+          "commonMistakes": "Thinking operating systems only provide Graphical User Interfaces (GUIs), ignoring the core resource management roles.",
+          "memoryTricks": "OS core roles = 'P-M-F-D': Process management, Memory management, File management, Device management.",
+          "oneMinuteNotes": "OS abstracts hardware and manages resources (CPU, RAM, Disks). Kernel is the core engine executing system calls and process control.",
+          "quiz": {
+            "question": "What mode transition occurs when a user application executes a system call?",
+            "options": [
+              "User Mode to Kernel Mode",
+              "Kernel Mode to User Mode",
+              "Virtual Mode to Physical Mode",
+              "Supervisor Mode to Idle Mode"
+            ],
+            "correctIndex": 0,
+            "explanation": "Executing a system call switches execution from unprivileged User Mode to privileged Kernel Mode to perform hardware tasks."
+          }
+        },
+        {
+          "id": "cs_4",
+          "subject": "Computer Networks",
+          "topicName": "Introduction",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "A Computer Network is a interconnected collection of computing devices that share resources, exchange data, and communicate via digital links and standardized protocols.",
+          "whyImportant": "Modern software operates across networked environments; understanding network communication principles is vital for API development, distributed systems, and web architectures.",
+          "analogy": "A network is like a global postal system. Devices are homes, IP addresses are postal street addresses, TCP is registered mail (delivery confirmed), and UDP is standard post.",
+          "detailedExplanation": "Computer networks rely on standard protocol stacks: the 7-layer OSI Model (Physical, Data Link, Network, Transport, Session, Presentation, Application) and the 4-layer TCP/IP Model (Network Access, Internet, Transport, Application). Nodes identify each other using MAC addresses (data link) and IP addresses (network layer).",
+          "visualization": "[ Sender Application ] --> [ Packets over Internet Network ] --> [ Receiver Application ]",
+          "codeExample": "// Conceptual network request\nfetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data));",
+          "interviewTips": "Memorize both the OSI and TCP/IP model layers and understand at which layer protocols like IP, TCP, UDP, HTTP, and DNS operate.",
+          "commonInterviewQuestions": [
+            "What is the difference between the OSI Model and TCP/IP Model?",
+            "What is the role of an IP address versus a MAC address?",
+            "What happens when you type a URL into a browser?"
+          ],
+          "commonMistakes": "Confusing Transport layer protocols (TCP/UDP) with Application layer protocols (HTTP/FTP).",
+          "memoryTricks": "OSI 7 Layers (Bottom-to-Top): Please Do Not Throw Sausage Pizza Away (Physical, Data Link, Network, Transport, Session, Presentation, Application).",
+          "oneMinuteNotes": "Networks connect nodes using protocol suites like TCP/IP. OSI model divides network functions into 7 distinct abstraction layers.",
+          "quiz": {
+            "question": "At which OSI layer do IP addresses function?",
+            "options": [
+              "Data Link Layer (Layer 2)",
+              "Network Layer (Layer 3)",
+              "Transport Layer (Layer 4)",
+              "Application Layer (Layer 7)"
+            ],
+            "correctIndex": 1,
+            "explanation": "IP (Internet Protocol) operates at Layer 3 (Network Layer) responsible for packet routing across networks."
+          }
+        },
+        {
+          "id": "cs_5",
+          "subject": "JavaScript",
+          "topicName": "Variables",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Variables in JavaScript are named containers used to store data values. Modern JS provides three keywords for declaration: var, let, and const.",
+          "whyImportant": "Understanding variable scope, hoisting, and mutability behavior is crucial to writing bug-free, predictable JavaScript code.",
+          "analogy": "Think of variables as labeled boxes. 'const' is a sealed box (cannot point to a new box), 'let' is a reusable box with strict room boundaries, and 'var' is a legacy box with loose boundaries.",
+          "detailedExplanation": "'var' is function-scoped or globally-scoped, and is hoisted with an initial value of undefined. 'let' and 'const' are block-scoped ({}) introduced in ES6, hoisted into a Temporal Dead Zone (TDZ). 'const' prevents variable re-assignment, though objects declared with const remain mutable.",
+          "visualization": "Scope Boundaries:\n{ \n   var functionScoped = 1; \n   let blockScoped = 2; \n}\n// blockScoped is inaccessible here, functionScoped is accessible.",
+          "codeExample": "var x = 10; // Function/Global scoped\nlet y = 20; // Block scoped\nconst z = 30; // Block scoped, re-assignment forbidden\n\n// z = 40; // Error: Assignment to constant variable.\nconst obj = { name: 'Alex' };\nobj.name = 'Bob'; // Allowed! Properties are mutable.",
+          "interviewTips": "Be clear on Temporal Dead Zone (TDZ), block scope, and the mutability of objects declared with const.",
+          "commonInterviewQuestions": [
+            "What is the difference between var, let, and const?",
+            "What is variable hoisting in JavaScript?",
+            "What is the Temporal Dead Zone (TDZ)?"
+          ],
+          "commonMistakes": "Assuming `const` makes an object or array immutable. `const` prevents re-binding of the identifier, not mutation of internal object properties.",
+          "memoryTricks": "Default to `const`. Use `let` only if reassignment is needed. Avoid `var` entirely in modern JS.",
+          "oneMinuteNotes": "`var` = function scope + hoisted as undefined. `let` = block scope + reassignable. `const` = block scope + read-only binding.",
+          "quiz": {
+            "question": "What is the result of attempting to access a 'let' variable before its declaration line?",
+            "options": [
+              "Returns undefined",
+              "Returns null",
+              "Throws a ReferenceError",
+              "Returns 0"
+            ],
+            "correctIndex": 2,
+            "explanation": "Variables declared with 'let' are hoisted into a Temporal Dead Zone (TDZ), and accessing them before declaration throws a ReferenceError."
+          }
+        },
+        {
+          "id": "cs_6",
+          "subject": "React",
+          "topicName": "React Introduction",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "React is an open-source JavaScript library developed by Meta for building dynamic user interfaces using component-based architecture.",
+          "whyImportant": "React revolutionized web frontend development with component modularity, declarative rendering, and fast DOM updates via its Virtual DOM mechanism.",
+          "analogy": "Building a UI with React is like building with LEGO bricks. You create small, reusable bricks (Components) and snap them together to assemble complete structures.",
+          "detailedExplanation": "React focuses purely on the View layer of applications. It utilizes JSX (JavaScript XML) to write HTML-like elements inside JavaScript. React uses a Virtual DOM—an in-memory representation of the real DOM—and efficient diffing algorithms to patch only changed parts of the real DOM, optimizing rendering speed.",
+          "visualization": "[ React Component State Change ] --> [ Re-render Virtual DOM ] --> [ Reconciliation Diffing ] --> [ Minimal Real DOM Update ]",
+          "codeExample": "import React from 'react';\n\nfunction Welcome(props) {\n  return <h1>Hello, {props.name}!</h1>;\n}\n\nexport default function App() {\n  return <Welcome name=\"Developer\" />;\n}",
+          "interviewTips": "Highlight component reusability, declarative UI programming, and how the Virtual DOM improves browser rendering efficiency.",
+          "commonInterviewQuestions": [
+            "What is React and what are its key features?",
+            "What is the Virtual DOM and how does it work?",
+            "What is the difference between Real DOM and Virtual DOM?"
+          ],
+          "commonMistakes": "Calling React a full-fledged MVC framework; React is a UI component library.",
+          "memoryTricks": "React Core Pillars: Component-Based, Declarative, Virtual DOM, Unidirectional Data Flow.",
+          "oneMinuteNotes": "React is a JS UI library. Key elements: JSX for syntax, Virtual DOM for fast reconciliation, component composition for reusable UI logic.",
+          "quiz": {
+            "question": "How does React update the browser's actual DOM efficiently?",
+            "options": [
+              "By updating the entire real DOM tree on every click",
+              "By comparing Virtual DOM trees and applying minimal required real DOM patches",
+              "By compiling JavaScript into direct C++ browser instructions",
+              "By executing raw HTML replacements via innerHTML"
+            ],
+            "correctIndex": 1,
+            "explanation": "React compares the new Virtual DOM tree with the previous Virtual DOM tree (reconciliation) and updates only changed nodes in the real DOM."
+          }
+        },
+        {
+          "id": "cs_7",
+          "subject": "Node.js & Express",
+          "topicName": "Node Introduction",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JS code outside the web browser, powered by Chrome's V8 engine.",
+          "whyImportant": "Node.js allows developers to write single-language full-stack applications (JavaScript on both frontend and backend) with high performance for I/O bound applications.",
+          "analogy": "Node.js is like a single highly efficient waiter at a restaurant taking orders (non-blocking I/O). Instead of standing around waiting for food to cook, the waiter passes orders to the kitchen and serves ready meals immediately.",
+          "detailedExplanation": "Node.js uses an Event-Driven, Non-Blocking, Single-Threaded I/O model based on the Event Loop. When non-blocking system tasks (like database reads or disk accesses) are issued, Node hands them off to libuv/underlying OS threads and continues processing other requests, executing callbacks upon completion.",
+          "visualization": "[ Event Loop ] <-- Receives Requests -- [ Single Thread ]\n      |\n      +--> Hands Heavy I/O to libuv Worker Threads --> Callbacks returned to Event Loop",
+          "codeExample": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello Node.js World\\n');\n});\n\nserver.listen(3000, () => {\n  console.log('Server running on port 3000');\n});",
+          "interviewTips": "Be prepared to explain the Event Loop, single-threaded execution model, non-blocking asynchronous I/O, and libuv thread pool.",
+          "commonInterviewQuestions": [
+            "What is Node.js and why is it single-threaded?",
+            "How does Node.js handle concurrency despite being single-threaded?",
+            "What is libuv and what role does it play in Node.js?"
+          ],
+          "commonMistakes": "Thinking Node.js is a backend programming language or framework; it is a JavaScript runtime environment.",
+          "memoryTricks": "Node.js = V8 engine + C++ bindings + libuv (Event Loop & Thread Pool).",
+          "oneMinuteNotes": "Node.js enables backend JS execution via V8 engine. Non-blocking asynchronous I/O makes it ideal for real-time, data-intensive microservices.",
+          "quiz": {
+            "question": "Which architecture allows Node.js to perform asynchronous I/O operations without blocking execution?",
+            "options": [
+              "Multi-threaded block allocation",
+              "Event Loop and libuv thread pool",
+              "Synchronous interrupt polling",
+              "Sequential queue processing"
+            ],
+            "correctIndex": 1,
+            "explanation": "Node.js utilizes an Event Loop and libuv for offloading asynchronous, non-blocking I/O operations."
+          }
+        },
+        {
+          "id": "cs_8",
+          "subject": "MongoDB",
+          "topicName": "NoSQL",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "NoSQL ('Not Only SQL') databases are non-tabular, schema-flexible data management systems built for flexible data modeling, high velocity, and easy horizontal scaling.",
+          "whyImportant": "Modern applications dealing with unstructured, rapidly changing, or high-volume streaming data require the flexibility and elastic scaling that NoSQL offers.",
+          "analogy": "A SQL database is like a strict filing cabinet where every folder must contain standardized forms. A NoSQL document database is like a folder system where each document can have unique tags, fields, and structures.",
+          "detailedExplanation": "NoSQL databases diverge from standard relational models (tables/rows) into four main categories: Document Stores (e.g., MongoDB, JSON-like BSON format), Key-Value Stores (e.g., Redis), Column-Family Stores (e.g., Cassandra), and Graph Databases (e.g., Neo4j). They prioritize scaling and dynamic schemas.",
+          "visualization": "[ SQL Table: Strict Columns ] vs [ NoSQL Document: { key: value, array: [1,2], nestedObj: {} } ]",
+          "codeExample": "// Example BSON Document in MongoDB\n{\n  \"_id\": ObjectId(\"60d5ec49f1a2c34b8c8b4567\"),\n  \"username\": \"johndoe\",\n  \"email\": \"john@example.com\",\n  \"skills\": [\"JavaScript\", \"MongoDB\", \"Node.js\"],\n  \"profile\": {\n    \"age\": 28,\n    \"verified\": true\n  }\n}",
+          "interviewTips": "Understand the CAP theorem and know when to recommend a NoSQL document store versus a relational SQL system.",
+          "commonInterviewQuestions": [
+            "What are the main differences between SQL and NoSQL databases?",
+            "What are the primary types of NoSQL databases?",
+            "What is the CAP Theorem?"
+          ],
+          "commonMistakes": "Assuming NoSQL databases never support ACID transactions (MongoDB supports multi-document ACID transactions since v4.0).",
+          "memoryTricks": "4 NoSQL Types: 'D-K-C-G' (Document, Key-Value, Columnar, Graph).",
+          "oneMinuteNotes": "NoSQL provides schema flexibility and horizontal scalability across document, key-value, column, and graph dynamic models.",
+          "quiz": {
+            "question": "Which type of NoSQL database is MongoDB?",
+            "options": [
+              "Key-Value Store",
+              "Graph Database",
+              "Document Database",
+              "Wide-Column Store"
+            ],
+            "correctIndex": 2,
+            "explanation": "MongoDB is a Document Database that stores data in JSON-like flexible BSON format."
+          }
+        },
+        {
+          "id": "cs_9",
+          "subject": "Git & GitHub",
+          "topicName": "Version Control",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Version Control Systems (VCS) are tools that track changes to source code over time, enabling software developers to collaborate, revert states, and maintain historical records.",
+          "whyImportant": "Version control is fundamental to team software development, enabling independent parallel feature development without corrupting main production branches.",
+          "analogy": "Git is like a video game save system with timeline branching. You can save (commit), branch off to test new paths, and merge back into the main storyline once successful.",
+          "detailedExplanation": "Git is a Distributed Version Control System (DVCS). Every developer maintains a full local copy of the repository history. GitHub is a cloud hosting service for Git repositories that adds collaborative tools like Pull Requests, Issue Tracking, Actions CI/CD pipelines, and Code Reviews.",
+          "visualization": "[ Working Directory ] -- git add --> [ Staging Index ] -- git commit --> [ Local Repo ] -- git push --> [ Remote (GitHub) ]",
+          "codeExample": "# Standard Git workflow\ngit clone https://github.com/user/repo.git\ngit checkout -b feature/new-login\n# edit files...\ngit add .\ngit commit -m \"Add user authentication flow\"\ngit push origin feature/new-login",
+          "interviewTips": "Know the difference between centralized vs distributed VCS and clearly state the distinction between Git (tool) and GitHub (hosting service).",
+          "commonInterviewQuestions": [
+            "What is the difference between Git and GitHub?",
+            "Explain the Git architecture (Working Directory, Staging Area, Repository).",
+            "What is the difference between git merge and git rebase?"
+          ],
+          "commonMistakes": "Confusing Git (the distributed command-line version control software) with GitHub (a cloud hosting web service).",
+          "memoryTricks": "Workflow sequence: Add (stage) -> Commit (snapshot) -> Push (upload).",
+          "oneMinuteNotes": "Git tracks local file snapshots distributedly. GitHub hosts remote repositories and provides collaboration workflow tools.",
+          "quiz": {
+            "question": "What state does code enter after running 'git add <filename>'?",
+            "options": [
+              "Local Repository",
+              "Staging Area (Index)",
+              "Remote Repository",
+              "Working Directory"
+            ],
+            "correctIndex": 1,
+            "explanation": "'git add' moves file changes from the Working Directory into the Staging Area, preparing them for the next commit snapshot."
+          }
+        },
+        {
+          "id": "cs_10",
+          "subject": "DSA Concepts",
+          "topicName": "Big O",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Big O Notation is a mathematical notation used in computer science to classify algorithms according to how their run time or space requirements grow as the input size grows.",
+          "whyImportant": "It provides a standardized metric to evaluate and compare the asymptotic time and space efficiency of algorithms independent of platform hardware execution environment.",
+          "analogy": "If delivering a hard drive to a friend across town takes 30 mins regardless of data size, it's O(1). If transferring data over a internet cable increases proportionally with file size, it's O(N).",
+          "detailedExplanation": "Big O evaluates worst-case performance scenarios. Key complexities in order of efficiency: O(1) [Constant], O(log N) [Logarithmic], O(N) [Linear], O(N log N) [Linearithmic], O(N^2) [Quadratic], and O(2^N) [Exponential]. Constant factors and non-dominant terms are dropped during analysis.",
+          "visualization": "Efficiency Curve:\nO(1) < O(log N) < O(N) < O(N log N) < O(N^2) < O(2^N)\n(Fastest/Best) ----------------------------------> (Slowest/Worst)",
+          "codeExample": "// O(1) Constant Time\nfunction getFirst(arr) { return arr[0]; }\n\n// O(N) Linear Time\nfunction printAll(arr) {\n  for (let item of arr) console.log(item);\n}\n\n// O(N^2) Quadratic Time\nfunction printPairs(arr) {\n  for (let i of arr)\n    for (let j of arr) console.log(i, j);\n}",
+          "interviewTips": "When solving coding questions, always state both the Time Complexity and Space Complexity explicitly before writing code.",
+          "commonInterviewQuestions": [
+            "What is Big O Notation and why do we drop constants in analysis?",
+            "What is the difference between Time Complexity and Space Complexity?",
+            "Compare O(N) vs O(log N) runtime complexities with array search algorithms."
+          ],
+          "commonMistakes": "Confusing worst-case performance (Big O) with best-case (Big Omega Ω) or average-case (Big Theta Θ).",
+          "memoryTricks": "Order: Constant (1) -> Logarithmic (log N) -> Linear (N) -> Polynomial (N^2) -> Exponential (2^N).",
+          "oneMinuteNotes": "Big O quantifies worst-case algorithmic scaling as input size N tends towards infinity, analyzing time runtime and space memory overhead.",
+          "quiz": {
+            "question": "What is the worst-case time complexity of searching for an element in an unsorted array of size N?",
+            "options": [
+              "O(1)",
+              "O(log N)",
+              "O(N)",
+              "O(N^2)"
+            ],
+            "correctIndex": 2,
+            "explanation": "In an unsorted array, linear search may need to examine every single element up to N times, yielding O(N) worst-case time complexity."
+          }
+        }
+      ],
+      "interviewQuestions": [
+        {
+          "id": "rev_q1",
+          "category": "Technical CS Core",
+          "question": "What is the difference between 'var', 'let', and 'const' in JavaScript regarding scope, hoisting, and re-assignment?",
+          "sampleAnswer": "In JavaScript, 'var' is function-scoped (or globally scoped) and is hoisted with an initial value of 'undefined', allowing access before its line of declaration without throwing errors. In contrast, 'let' and 'const' are block-scoped ({}) introduced in ES6; they are also hoisted, but reside in a 'Temporal Dead Zone' (TDZ) where accessing them prior to declaration throws a ReferenceError.\n\nRegarding re-assignment: 'var' and 'let' allow variable values to be rebound at any time. 'const' creates a read-only reference that prevents re-assignment of the variable identifier. However, if a 'const' variable holds an object or array, internal properties can still be mutated.",
+          "frequency": "Asked in 90% of Tech Interviews"
+        },
+        {
+          "id": "rev_q2",
+          "category": "Technical CS Core",
+          "question": "How does Node.js achieve high concurrency and non-blocking I/O given that JavaScript runs on a single main thread?",
+          "sampleAnswer": "Node.js achieves high throughput without multi-threading through an event-driven architecture powered by Chrome's V8 engine and the 'libuv' C++ library, which provides the Event Loop.\n\nWhen Node.js initiates an I/O task (such as reading a file or making a network call), it delegates the operation to the operating system kernel or to background thread workers managed by libuv. The main JavaScript thread does not block waiting for completion; instead, it immediately resumes processing incoming requests or executing other JS callbacks.\n\nWhen an asynchronous operation finishes, libuv pushes its callback function onto an Event Queue. The Event Loop continuously inspects the call stack, and whenever the stack becomes empty, it picks up pending callbacks from the queue and executes them sequentially on the main JavaScript thread.",
+          "frequency": "Asked in 85% of Tech Interviews"
+        },
+        {
+          "id": "rev_q3",
+          "category": "Technical CS Core",
+          "question": "Explain the four key pillars of Object-Oriented Programming (OOP) and provide a real-world example for each.",
+          "sampleAnswer": "The four main pillars of OOP are Encapsulation, Abstraction, Inheritance, and Polymorphism:\n\n1. Encapsulation: Bundling data (attributes) and methods that operate on that data inside a single unit/class, restricting direct access to internal state using access modifiers (private/protected). Example: A BankAccount class keeping its 'balance' private and exposing only 'deposit()' and 'withdraw()' methods.\n2. Abstraction: Hiding internal complex implementation details and showing only key functional interfaces. Example: A Car interface exposing a 'drive()' method without requiring the driver to understand internal fuel injection mechanics.\n3. Inheritance: Reusing attributes and methods from an existing class to create child classes. Example: A 'Dog' class inheriting common properties from an 'Animal' base class.\n4. Polymorphism: The ability of different classes to respond to the same method call in unique ways. Example: A base 'Shape' class with a 'draw()' method overridden differently by 'Circle' and 'Square' subclasses.",
+          "frequency": "Asked in 95% of Tech Interviews"
+        }
+      ]
+    }
+  },
+  "completed_topics": [],
+  "english_submissions": [],
+  "user_notes": [],
+  "bookmarks": [],
+  "progress": {
+    "currentStreak": 1,
+    "longestStreak": 1,
+    "wordsLearned": 0,
+    "sentencesWritten": 0,
+    "avgGrammarScore": 0,
+    "avgEnglishScore": 0,
+    "conceptsCompleted": 0,
+    "conceptCompletionPercentage": 0,
+    "interviewReadinessScore": 0,
+    "subjectProgress": {
+      "Object-Oriented Programming": 0,
+      "Database Management System": 0,
+      "Operating System": 0,
+      "Computer Networks": 0,
+      "JavaScript": 0,
+      "React": 0,
+      "Node.js & Express": 0,
+      "MongoDB": 0,
+      "Git & GitHub": 0,
+      "DSA Concepts": 0
+    },
+    "weeklyActivity": [
+      {
+        "day": "Mon",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Tue",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Wed",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Thu",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Fri",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Sat",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Sun",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      }
+    ]
+  }
+}
