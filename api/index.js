@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from '../server/config/db.js';
-import * as initialData from '../server/data/initialData.js';
 
 import dashboardRoutes from '../server/routes/dashboard.js';
 import englishRoutes from '../server/routes/english.js';
@@ -18,8 +17,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect Database
-await connectDB(initialData);
+// Safe DB Middleware
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+  } catch (e) {
+    console.error('DB Middleware Notice:', e.message);
+  }
+  next();
+});
 
 // API Routes
 app.use('/api/dashboard', dashboardRoutes);
@@ -31,6 +37,12 @@ app.use('/api/search', searchRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'online', name: 'Placement Companion API', timestamp: new Date().toISOString() });
+});
+
+// Global Error Handler so serverless function never returns 500 HTML
+app.use((err, req, res, next) => {
+  console.error('API Error:', err);
+  res.status(500).json({ success: false, error: err.message || 'Internal Server Error' });
 });
 
 export default app;

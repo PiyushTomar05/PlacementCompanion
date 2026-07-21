@@ -1,0 +1,100 @@
+{
+  "daily_lessons": {},
+  "completed_topics": [],
+  "english_submissions": [],
+  "user_notes": [],
+  "bookmarks": [],
+  "daily_tasks": [
+    {
+      "id": "t1",
+      "title": "Daily 10 Placement English Words",
+      "module": "English",
+      "completed": false
+    },
+    {
+      "id": "t2",
+      "title": "Sentence Writing & AI Review",
+      "module": "English",
+      "completed": false
+    },
+    {
+      "id": "t3",
+      "title": "Daily 10 Core CS Master Roadmap Topics",
+      "module": "CS",
+      "completed": false
+    },
+    {
+      "id": "t4",
+      "title": "Daily Spaced Repetition Revision",
+      "module": "Revision",
+      "completed": false
+    }
+  ],
+  "progress": {
+    "currentStreak": 1,
+    "longestStreak": 1,
+    "wordsLearned": 0,
+    "sentencesWritten": 0,
+    "avgGrammarScore": 0,
+    "avgEnglishScore": 0,
+    "conceptsCompleted": 0,
+    "conceptCompletionPercentage": 0,
+    "interviewReadinessScore": 0,
+    "subjectProgress": {
+      "Object-Oriented Programming": 0,
+      "Database Management System": 0,
+      "Operating System": 0,
+      "Computer Networks": 0,
+      "JavaScript": 0,
+      "React": 0,
+      "Node.js & Express": 0,
+      "MongoDB": 0,
+      "Git & GitHub": 0,
+      "DSA Concepts": 0
+    },
+    "weeklyActivity": [
+      {
+        "day": "Mon",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Tue",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Wed",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Thu",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Fri",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Sat",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      },
+      {
+        "day": "Sun",
+        "words": 0,
+        "cs": 0,
+        "reviewScore": 0
+      }
+    ]
+  }
+}
