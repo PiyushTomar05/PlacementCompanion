@@ -8,13 +8,17 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 // Robust Gemini call with retries across standard models
 async function callGeminiWithRetry(prompt, retries = 2) {
   const geminiKey = process.env.GEMINI_API_KEY;
-  if (!geminiKey) return null;
+  if (!geminiKey) {
+    console.warn('⚠️ GEMINI_API_KEY is not set in process.env');
+    return null;
+  }
 
-  const genAI = new GoogleGenerativeAI(geminiKey);
-  const models = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.0-flash-lite", "gemini-1.5-pro"];
+  const genAI = new GoogleGenerativeAI(geminiKey.trim());
+  const models = ["gemini-3.6-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.0-flash-lite", "gemini-1.5-pro"];
 
   for (const m of models) {
     try {
+      console.log(`🤖 Attempting AI lesson generation using model: ${m}...`);
       const model = genAI.getGenerativeModel({ model: m });
 
       for (let attempt = 1; attempt <= retries; attempt++) {
@@ -22,6 +26,7 @@ async function callGeminiWithRetry(prompt, retries = 2) {
           const result = await model.generateContent(prompt);
           const text = result.response.text();
           if (text && text.trim().length > 0) {
+            console.log(`✅ Gemini API model ${m} generated content successfully!`);
             return text;
           }
         } catch (e) {
@@ -237,7 +242,7 @@ Respond STRICTLY with a single JSON object containing:
     }
   }
 
-  console.log('ℹ️ Returning resilient fallback daily bundle.');
+  console.log('ℹ️ Returning fallback daily bundle.');
   return getFallbackDailyBundle();
 }
 
