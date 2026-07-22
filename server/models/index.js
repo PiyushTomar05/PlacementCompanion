@@ -66,7 +66,7 @@ export const DataStore = {
 
     if (isMongoConnected) {
       let lesson = await MongoModels.DailyLesson.findOne({ date: today }).lean();
-      if (lesson && lesson.englishWords?.length > 0 && lesson.csTopics?.length > 0) {
+      if (lesson && lesson.englishWords?.length >= 10 && lesson.csTopics?.length >= 10) {
         return lesson;
       }
 
@@ -111,7 +111,7 @@ export const DataStore = {
     const db = readLocalDb();
     db.daily_lessons = db.daily_lessons || {};
 
-    if (db.daily_lessons[today] && db.daily_lessons[today].englishWords?.length > 0 && db.daily_lessons[today].csTopics?.length > 0) {
+    if (db.daily_lessons[today] && db.daily_lessons[today].englishWords?.length >= 10 && db.daily_lessons[today].csTopics?.length >= 10) {
       return db.daily_lessons[today];
     }
 
