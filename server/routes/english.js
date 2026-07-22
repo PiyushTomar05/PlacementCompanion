@@ -1,6 +1,6 @@
 import express from 'express';
 import { DataStore } from '../models/index.js';
-import { evaluateSentence } from '../services/aiService.js';
+import { evaluateSentence, getFallbackDailyBundle } from '../services/aiService.js';
 
 const router = express.Router();
 
@@ -8,26 +8,15 @@ const router = express.Router();
 router.get('/words', async (req, res) => {
   try {
     const words = await DataStore.getEnglishWords();
-    res.json({ success: true, data: words });
+    if (Array.isArray(words) && words.length > 0) {
+      return res.json({ success: true, data: words });
+    }
+    const fallback = getFallbackDailyBundle();
+    res.json({ success: true, data: fallback.englishWords });
   } catch (err) {
     console.warn('English words route notice:', err.message);
-    res.json({
-      success: true,
-      data: [
-        {
-          id: "eng_fb_1",
-          word: "Pragmatic",
-          pronunciation: "/præɡˈmæt.ɪk/",
-          meaning: "Dealing with things sensibly and realistically based on practical rather than theoretical considerations.",
-          synonyms: ["Practical", "Realistic", "Sensible"],
-          example: "In software engineering, adopting a pragmatic approach to architecture balances delivery speed with code quality.",
-          corporateUsage: "Used frequently when discussing trade-offs between tech debt, feature scope, and production timelines.",
-          interviewUsage: "Great word to demonstrate maturity during system design and behavioral interview scenarios.",
-          difficulty: "Intermediate",
-          category: "Corporate Communication"
-        }
-      ]
-    });
+    const fallback = getFallbackDailyBundle();
+    res.json({ success: true, data: fallback.englishWords });
   }
 });
 

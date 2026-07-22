@@ -16,7 +16,7 @@ import {
 
 const FALLBACK_WORDS = [
   {
-    id: "eng_fb_1",
+    id: "eng_1",
     word: "Pragmatic",
     pronunciation: "/præɡˈmæt.ɪk/",
     meaning: "Dealing with things sensibly and realistically based on practical rather than theoretical considerations.",
@@ -28,7 +28,7 @@ const FALLBACK_WORDS = [
     category: "Corporate Communication"
   },
   {
-    id: "eng_fb_2",
+    id: "eng_2",
     word: "Scalability",
     pronunciation: "/ˌskeɪ.ləˈbɪl.ə.ti/",
     meaning: "The capability of a system to handle a growing amount of work by adding resources.",
@@ -40,7 +40,7 @@ const FALLBACK_WORDS = [
     category: "Technical Vocabulary"
   },
   {
-    id: "eng_fb_3",
+    id: "eng_3",
     word: "Idempotent",
     pronunciation: "/ˌaɪ.dəmˈpoʊ.tənt/",
     meaning: "Denoting an operation that produces the same result no matter how many times it is executed.",
@@ -50,6 +50,90 @@ const FALLBACK_WORDS = [
     interviewUsage: "High-yield term in backend engineering interviews when describing RESTful API standards.",
     difficulty: "Mastery",
     category: "Backend Architecture"
+  },
+  {
+    id: "eng_4",
+    word: "Bottleneck",
+    pronunciation: "/ˈbɒt.əl.nek/",
+    meaning: "A point of congestion in a system that stops or slows down performance.",
+    synonyms: ["Obstruction", "Impediment"],
+    example: "Database unindexed queries were the main bottleneck slowing down user authentication response times.",
+    corporateUsage: "Commonly used in sprint planning and root cause analysis of system slowdowns.",
+    interviewUsage: "Use when explaining profiling tools, SQL indexing, or performance optimization.",
+    difficulty: "Intermediate",
+    category: "System Performance"
+  },
+  {
+    id: "eng_5",
+    word: "Redundancy",
+    pronunciation: "/rɪˈdʌn.dən.si/",
+    meaning: "The inclusion of extra components to ensure functioning in case of fault or failure.",
+    synonyms: ["Duplication", "Backup"],
+    example: "Deploying multi-region database replicas provides high availability through geographic redundancy.",
+    corporateUsage: "Standard term in cloud architecture specs and disaster recovery planning.",
+    interviewUsage: "Essential concept when answering cloud reliability and distributed systems questions.",
+    difficulty: "Intermediate",
+    category: "Cloud Infrastructure"
+  },
+  {
+    id: "eng_6",
+    word: "Latency",
+    pronunciation: "/ˈleɪ.tən.si/",
+    meaning: "The time delay between the cause and the effect of some physical change in a system.",
+    synonyms: ["Delay", "Lag"],
+    example: "Redis caching reduced database query latency from 250 milliseconds down to 5 milliseconds.",
+    corporateUsage: "Primary metric monitored on SLA dashboards and network performance reports.",
+    interviewUsage: "Use to articulate performance improvements in system design interviews.",
+    difficulty: "Intermediate",
+    category: "Network Optimization"
+  },
+  {
+    id: "eng_7",
+    word: "Asynchronous",
+    pronunciation: "/eɪˈsɪŋ.krə.nəs/",
+    meaning: "Operations that do not happen at the same time or require immediate synchronous blocking.",
+    synonyms: ["Non-blocking", "Concurrent"],
+    example: "Using RabbitMQ message queues allows background email processing to happen asynchronously.",
+    corporateUsage: "Key term when discussing event-driven microservices and decoupled software architectures.",
+    interviewUsage: "Crucial keyword in JavaScript Event Loop and Node.js backend interview questions.",
+    difficulty: "Advanced",
+    category: "Event-Driven Design"
+  },
+  {
+    id: "eng_8",
+    word: "Deprecate",
+    pronunciation: "/ˈdep.rə.keɪt/",
+    meaning: "To express disapproval of, or declare a software feature obsolete in favor of a newer alternative.",
+    synonyms: ["Phase out", "Discontinue"],
+    example: "The engineering team decided to deprecate REST endpoint v1 in favor of the new GraphQL API.",
+    corporateUsage: "Used during version release notes and software lifecycle migration roadmaps.",
+    interviewUsage: "Demonstrates experience with maintaining legacy codebases and API versioning.",
+    difficulty: "Intermediate",
+    category: "API Lifecycle Management"
+  },
+  {
+    id: "eng_9",
+    word: "Orchestration",
+    pronunciation: "/ˌɔː.kɪˈstreɪ.ʃən/",
+    meaning: "Automated configuration, coordination, and management of computer systems and services.",
+    synonyms: ["Coordination", "Management"],
+    example: "Kubernetes manages container orchestration across hundreds of microservice worker nodes.",
+    corporateUsage: "Central concept in DevOps, CI/CD pipelines, and cloud container deployments.",
+    interviewUsage: "High-impact keyword when discussing DevOps practices and scalable infrastructure.",
+    difficulty: "Advanced",
+    category: "DevOps & Microservices"
+  },
+  {
+    id: "eng_10",
+    word: "Resilience",
+    pronunciation: "/rɪˈzɪl.jəns/",
+    meaning: "The capacity of a system to recover quickly from difficulties or unexpected infrastructure outages.",
+    synonyms: ["Robustness", "Fault-tolerance"],
+    example: "Implementing circuit breakers in microservices improves application resilience during third-party API downtime.",
+    corporateUsage: "Frequently emphasized in enterprise software quality and reliability goals.",
+    interviewUsage: "Excellent term for discussing fault tolerance and error handling strategies.",
+    difficulty: "Advanced",
+    category: "Fault-Tolerant Systems"
   }
 ];
 
@@ -60,7 +144,6 @@ export default function EnglishModule() {
   const [evaluating, setEvaluating] = useState(false);
   const [evaluationResult, setEvaluationResult] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
     fetchWords();
@@ -68,7 +151,6 @@ export default function EnglishModule() {
 
   const fetchWords = async () => {
     setLoading(true);
-    setErrorMsg(null);
     try {
       const res = await axios.get('/api/english/words');
       if (res.data && res.data.success && Array.isArray(res.data.data) && res.data.data.length > 0) {
@@ -79,7 +161,7 @@ export default function EnglishModule() {
         handleSelectWord(FALLBACK_WORDS[0]);
       }
     } catch (err) {
-      console.warn('Network notice, using resilient fallback vocabulary:', err.message);
+      console.warn('Network notice, using resilient fallback 10 vocabulary words:', err.message);
       setWords(FALLBACK_WORDS);
       handleSelectWord(FALLBACK_WORDS[0]);
     } finally {
