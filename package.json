@@ -1,6 +1,7 @@
 {
   "name": "placement-companion",
   "version": "1.0.0",
+  "type": "module",
   "description": "Placement Companion - AI-Teacher Driven Dynamic Learning System",
   "private": true,
   "scripts": {
