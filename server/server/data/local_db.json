@@ -1,5 +1,192 @@
 {
-  "daily_lessons": {},
+  "daily_lessons": {
+    "2026-07-21": {
+      "date": "2026-07-21",
+      "englishWords": [
+        {
+          "id": "eng_fb_1",
+          "word": "Pragmatic",
+          "pronunciation": "/præɡˈmæt.ɪk/",
+          "meaning": "Dealing with things sensibly and realistically based on practical rather than theoretical considerations.",
+          "synonyms": [
+            "Practical",
+            "Realistic",
+            "Sensible"
+          ],
+          "example": "In software engineering, adopting a pragmatic approach to architecture balances delivery speed with code quality.",
+          "corporateUsage": "Used frequently when discussing trade-offs between tech debt, feature scope, and production timelines.",
+          "interviewUsage": "Great word to demonstrate maturity during system design and behavioral interview scenarios.",
+          "difficulty": "Intermediate",
+          "category": "Corporate Communication"
+        },
+        {
+          "id": "eng_fb_2",
+          "word": "Scalability",
+          "pronunciation": "/ˌskeɪ.ləˈbɪl.ə.ti/",
+          "meaning": "The capability of a system to handle a growing amount of work by adding resources.",
+          "synonyms": [
+            "Expandability",
+            "Growth capacity"
+          ],
+          "example": "Horizontal scalability allows microservices to distribute heavy traffic across multiple cloud instances.",
+          "corporateUsage": "Core term used in technical specs, engineering reviews, and cloud deployment discussions.",
+          "interviewUsage": "Must-use keyword when explaining database indexing, caching strategies, and system design.",
+          "difficulty": "Advanced",
+          "category": "Technical Vocabulary"
+        },
+        {
+          "id": "eng_fb_3",
+          "word": "Idempotent",
+          "pronunciation": "/ˌaɪ.dəmˈpoʊ.tənt/",
+          "meaning": "Denoting an operation that produces the same result no matter how many times it is executed.",
+          "synonyms": [
+            "Repeatable",
+            "Consistent"
+          ],
+          "example": "HTTP PUT and DELETE endpoints are designed to be idempotent to ensure safe retry mechanisms.",
+          "corporateUsage": "Essential in API design, payment gateways, and reliable background worker job queues.",
+          "interviewUsage": "High-yield term in backend engineering interviews when describing RESTful API standards.",
+          "difficulty": "Mastery",
+          "category": "Backend Architecture"
+        }
+      ],
+      "csTopics": [
+        {
+          "id": "cs_fb_1",
+          "subject": "Object-Oriented Programming",
+          "topicName": "Encapsulation & Abstraction",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Encapsulation bundles data and methods operating on that data within a single unit, hiding internal state from direct external modification.",
+          "whyImportant": "Prevents unintended side effects and ensures data integrity across complex enterprise codebases.",
+          "analogy": "Think of an ATM: you press buttons to withdraw money (Interface/Abstraction) without touching internal cash vaults or hardware (Encapsulation).",
+          "detailedExplanation": "Encapsulation is achieved using private/protected access modifiers and getter/setter functions. Abstraction hides background complexity while showing essential features.",
+          "visualization": "Class Car { private Engine engine; public void start() { engine.ignite(); } }",
+          "codeExample": "class BankAccount {\n  private balance = 0;\n  public deposit(amount) { if (amount > 0) this.balance += amount; }\n  public getBalance() { return this.balance; }\n}",
+          "interviewTips": "Always emphasize how encapsulation protects class invariants and simplifies unit testing.",
+          "commonInterviewQuestions": [
+            "What is the difference between Abstraction and Encapsulation?"
+          ],
+          "commonMistakes": "Exposing internal mutable state directly through public getters.",
+          "memoryTricks": "Encapsulation = Data Hiding. Abstraction = Interface Hiding.",
+          "oneMinuteNotes": "Encapsulation = Protect Data. Abstraction = Simplify Interface.",
+          "quiz": {
+            "question": "Which OOP concept is achieved by hiding class data members behind private access modifiers?",
+            "options": [
+              "Encapsulation",
+              "Polymorphism",
+              "Inheritance",
+              "Compilation"
+            ],
+            "correctIndex": 0,
+            "explanation": "Encapsulation restricts direct access to an object's components."
+          }
+        }
+      ],
+      "interviewQuestions": [
+        {
+          "id": "rev_q1",
+          "category": "Technical CS Core",
+          "question": "Explain the difference between Process and Thread.",
+          "sampleAnswer": "A Process is an independent executing program with its own dedicated memory space allocated by the OS. A Thread is a lightweight execution unit inside a process that shares memory, code, and resources with peer threads. Creating threads is faster and consumes fewer OS resources than spawning processes.",
+          "frequency": "Asked in 95% of Software Engineering Interviews"
+        }
+      ]
+    },
+    "2026-07-22": {
+      "date": "2026-07-22",
+      "englishWords": [
+        {
+          "id": "eng_fb_1",
+          "word": "Pragmatic",
+          "pronunciation": "/præɡˈmæt.ɪk/",
+          "meaning": "Dealing with things sensibly and realistically based on practical rather than theoretical considerations.",
+          "synonyms": [
+            "Practical",
+            "Realistic",
+            "Sensible"
+          ],
+          "example": "In software engineering, adopting a pragmatic approach to architecture balances delivery speed with code quality.",
+          "corporateUsage": "Used frequently when discussing trade-offs between tech debt, feature scope, and production timelines.",
+          "interviewUsage": "Great word to demonstrate maturity during system design and behavioral interview scenarios.",
+          "difficulty": "Intermediate",
+          "category": "Corporate Communication"
+        },
+        {
+          "id": "eng_fb_2",
+          "word": "Scalability",
+          "pronunciation": "/ˌskeɪ.ləˈbɪl.ə.ti/",
+          "meaning": "The capability of a system to handle a growing amount of work by adding resources.",
+          "synonyms": [
+            "Expandability",
+            "Growth capacity"
+          ],
+          "example": "Horizontal scalability allows microservices to distribute heavy traffic across multiple cloud instances.",
+          "corporateUsage": "Core term used in technical specs, engineering reviews, and cloud deployment discussions.",
+          "interviewUsage": "Must-use keyword when explaining database indexing, caching strategies, and system design.",
+          "difficulty": "Advanced",
+          "category": "Technical Vocabulary"
+        },
+        {
+          "id": "eng_fb_3",
+          "word": "Idempotent",
+          "pronunciation": "/ˌaɪ.dəmˈpoʊ.tənt/",
+          "meaning": "Denoting an operation that produces the same result no matter how many times it is executed.",
+          "synonyms": [
+            "Repeatable",
+            "Consistent"
+          ],
+          "example": "HTTP PUT and DELETE endpoints are designed to be idempotent to ensure safe retry mechanisms.",
+          "corporateUsage": "Essential in API design, payment gateways, and reliable background worker job queues.",
+          "interviewUsage": "High-yield term in backend engineering interviews when describing RESTful API standards.",
+          "difficulty": "Mastery",
+          "category": "Backend Architecture"
+        }
+      ],
+      "csTopics": [
+        {
+          "id": "cs_fb_1",
+          "subject": "Object-Oriented Programming",
+          "topicName": "Encapsulation & Abstraction",
+          "difficulty": "Beginner",
+          "readingTime": "5 mins",
+          "definition": "Encapsulation bundles data and methods operating on that data within a single unit, hiding internal state from direct external modification.",
+          "whyImportant": "Prevents unintended side effects and ensures data integrity across complex enterprise codebases.",
+          "analogy": "Think of an ATM: you press buttons to withdraw money (Interface/Abstraction) without touching internal cash vaults or hardware (Encapsulation).",
+          "detailedExplanation": "Encapsulation is achieved using private/protected access modifiers and getter/setter functions. Abstraction hides background complexity while showing essential features.",
+          "visualization": "Class Car { private Engine engine; public void start() { engine.ignite(); } }",
+          "codeExample": "class BankAccount {\n  private balance = 0;\n  public deposit(amount) { if (amount > 0) this.balance += amount; }\n  public getBalance() { return this.balance; }\n}",
+          "interviewTips": "Always emphasize how encapsulation protects class invariants and simplifies unit testing.",
+          "commonInterviewQuestions": [
+            "What is the difference between Abstraction and Encapsulation?"
+          ],
+          "commonMistakes": "Exposing internal mutable state directly through public getters.",
+          "memoryTricks": "Encapsulation = Data Hiding. Abstraction = Interface Hiding.",
+          "oneMinuteNotes": "Encapsulation = Protect Data. Abstraction = Simplify Interface.",
+          "quiz": {
+            "question": "Which OOP concept is achieved by hiding class data members behind private access modifiers?",
+            "options": [
+              "Encapsulation",
+              "Polymorphism",
+              "Inheritance",
+              "Compilation"
+            ],
+            "correctIndex": 0,
+            "explanation": "Encapsulation restricts direct access to an object's components."
+          }
+        }
+      ],
+      "interviewQuestions": [
+        {
+          "id": "rev_q1",
+          "category": "Technical CS Core",
+          "question": "Explain the difference between Process and Thread.",
+          "sampleAnswer": "A Process is an independent executing program with its own dedicated memory space allocated by the OS. A Thread is a lightweight execution unit inside a process that shares memory, code, and resources with peer threads. Creating threads is faster and consumes fewer OS resources than spawning processes.",
+          "frequency": "Asked in 95% of Software Engineering Interviews"
+        }
+      ]
+    }
+  },
   "completed_topics": [],
   "english_submissions": [],
   "user_notes": [],
