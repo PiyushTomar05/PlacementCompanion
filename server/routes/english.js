@@ -1,13 +1,15 @@
 import express from 'express';
 import { DataStore } from '../models/index.js';
 import { evaluateSentence, getFallbackDailyBundle } from '../services/aiService.js';
+import { optionalAuthenticateToken } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
 // GET /api/english/words - Today's 10 words
-router.get('/words', async (req, res) => {
+router.get('/words', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
-    const words = await DataStore.getEnglishWords();
+    const words = await DataStore.getEnglishWords(userId);
     if (Array.isArray(words) && words.length > 0) {
       return res.json({ success: true, data: words });
     }
@@ -21,7 +23,8 @@ router.get('/words', async (req, res) => {
 });
 
 // POST /api/english/review - AI sentence review
-router.post('/review', async (req, res) => {
+router.post('/review', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
     const { wordId, word, sentence } = req.body;
     if (!word || !sentence) {
@@ -36,7 +39,7 @@ router.post('/review', async (req, res) => {
         word,
         userSentence: sentence,
         evaluation
-      });
+      }, userId);
     } catch (e) {}
 
     res.json({

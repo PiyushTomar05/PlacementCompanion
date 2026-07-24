@@ -1,15 +1,17 @@
 import express from 'express';
 import { DataStore } from '../models/index.js';
+import { optionalAuthenticateToken } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
 // GET /api/dashboard - Combined statistics, streak, daily progress
-router.get('/', async (req, res) => {
+router.get('/', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
-    const progress = await DataStore.getProgress().catch(() => ({}));
-    const tasks = (await DataStore.getDailyTasks().catch(() => [])) || [];
-    const words = (await DataStore.getEnglishWords().catch(() => [])) || [];
-    const csTopics = (await DataStore.getCsTopics().catch(() => [])) || [];
+    const progress = await DataStore.getProgress(userId).catch(() => ({}));
+    const tasks = (await DataStore.getDailyTasks(userId).catch(() => [])) || [];
+    const words = (await DataStore.getEnglishWords(userId).catch(() => [])) || [];
+    const csTopics = (await DataStore.getCsTopics(userId).catch(() => [])) || [];
 
     const completedTasksCount = tasks.filter(t => t.completed).length;
     const totalTasksCount = tasks.length || 1;
@@ -40,9 +42,10 @@ router.get('/', async (req, res) => {
 });
 
 // POST /api/dashboard/task/:id/toggle
-router.post('/task/:id/toggle', async (req, res) => {
+router.post('/task/:id/toggle', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
-    const task = await DataStore.toggleTask(req.params.id);
+    const task = await DataStore.toggleTask(req.params.id, userId);
     res.json({ success: true, data: task });
   } catch (err) {
     res.json({ success: true, data: { id: req.params.id, completed: true } });

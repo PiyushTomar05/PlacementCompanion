@@ -11,6 +11,7 @@ import csRoutes from './routes/cs.js';
 import revisionRoutes from './routes/revision.js';
 import interviewRoutes from './routes/interview.js';
 import searchRoutes from './routes/search.js';
+import authRoutes from './routes/auth.js';
 
 dotenv.config();
 
@@ -32,6 +33,9 @@ app.use(async (req, res, next) => {
 });
 
 // Mount API Routes on both /api/ and direct paths for Vercel serverless compatibility
+app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
+
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/dashboard', dashboardRoutes);
 

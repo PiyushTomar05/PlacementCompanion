@@ -1,15 +1,17 @@
 import express from 'express';
 import { DataStore } from '../models/index.js';
 import { getFallbackDailyBundle } from '../services/aiService.js';
+import { optionalAuthenticateToken } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
 // GET /api/cs/topics - Get all daily CS topics for all 10 roadmap subjects
-router.get('/topics', async (req, res) => {
+router.get('/topics', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
-    const topics = await DataStore.getCsTopics();
-    const notes = await DataStore.getUserNotes().catch(() => []);
-    const bookmarks = await DataStore.getBookmarks().catch(() => []);
+    const topics = await DataStore.getCsTopics(userId);
+    const notes = await DataStore.getUserNotes(userId).catch(() => []);
+    const bookmarks = await DataStore.getBookmarks(userId).catch(() => []);
 
     if (Array.isArray(topics) && topics.length > 0) {
       const merged = topics.map(t => {
@@ -34,9 +36,10 @@ router.get('/topics', async (req, res) => {
 });
 
 // POST /api/cs/topic/:id/toggle - Toggle completion
-router.post('/topic/:id/toggle', async (req, res) => {
+router.post('/topic/:id/toggle', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
-    const topic = await DataStore.toggleCsTopicComplete(req.params.id);
+    const topic = await DataStore.toggleCsTopicComplete(req.params.id, userId);
     res.json({ success: true, data: topic });
   } catch (err) {
     res.json({ success: true, data: { topicId: req.params.id, completed: true } });
@@ -44,10 +47,11 @@ router.post('/topic/:id/toggle', async (req, res) => {
 });
 
 // POST /api/cs/note - Save personal note
-router.post('/note', async (req, res) => {
+router.post('/note', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
     const { topicId, noteText } = req.body;
-    const result = await DataStore.saveNote(topicId, noteText);
+    const result = await DataStore.saveNote(topicId, noteText, userId);
     res.json({ success: true, data: result });
   } catch (err) {
     res.json({ success: true, data: { topicId: req.body.topicId, noteText: req.body.noteText } });
@@ -55,10 +59,11 @@ router.post('/note', async (req, res) => {
 });
 
 // POST /api/cs/bookmark - Toggle bookmark
-router.post('/bookmark', async (req, res) => {
+router.post('/bookmark', optionalAuthenticateToken, async (req, res) => {
+  const userId = req.user?.userId || 'default';
   try {
     const { itemId, title, type = 'CS' } = req.body;
-    const bookmarks = await DataStore.toggleBookmark(type, itemId, title);
+    const bookmarks = await DataStore.toggleBookmark(type, itemId, title, userId);
     res.json({ success: true, data: bookmarks });
   } catch (err) {
     res.json({ success: true, data: [] });
